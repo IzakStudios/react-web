@@ -1,4 +1,5 @@
-import Button from "../components/Topbar/Button/Button"
+import Button from "../../components/Topbar/Button/Button"
+import "./Home.css";
 
 const TopbarButtons = [
     "Home",
