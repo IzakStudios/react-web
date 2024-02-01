@@ -34,7 +34,7 @@
     border-width: 0.35vw;
     border-style: solid;
 
-    box-shadow: 0px 0px 1em 0 #fffa;
+    box-shadow: 0px 0px 1em 0 #000a;
     transform: translateZ(-900px);
 
     transition: 0.1s;
@@ -43,14 +43,14 @@
 
 .panel-button-holder :hover {
     scale: 1.025;
-    box-shadow: 0px 2px 1em 0 #fffa;
+    box-shadow: 0px 2px 1em 0 #7777;
     border-color: #fffa;
 }
 
 .panel-button-holder :active {
     transition: 0.05s;
     transition-timing-function: cubic-bezier(0, 1, 0.4, 1);
-    box-shadow: 0px 0px 1.5em 0 #fffa;
+    box-shadow: 0px 0px 1.5em 0 #000a;
     scale: 0.95;
 }
 

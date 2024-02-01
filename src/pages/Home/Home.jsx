@@ -15,13 +15,13 @@ const HomePanels = [
         "name": "Panel Name 1",
 
         "description": "Panel Description 1",
-        "image": "",
+        "image": "https://ih1.redbubble.net/image.490263180.2295/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
     },
     {
-        "name": "testPanel",
+        "name": "Panel Name 2",
 
         "description": "Panel Description 2",
-        "image": "",
+        "image": "https://ih1.redbubble.net/image.490263180.2295/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
     },
 ]
 
@@ -31,7 +31,7 @@ function Home() {
             <div className="topbar">
                 {
                     TopbarButtons.map(
-                        ( object, index ) => {
+                        object => {
                             return < Button textContent = { object } onClick = {
                                 () => {
                                     location.assign(`/${object.toLowerCase()}`)
@@ -44,7 +44,7 @@ function Home() {
             <div className="content">
                 {
                     HomePanels.map(
-                        ( object, index ) => {
+                        object => {
                             return < PanelContainer
                                 name = { object["name"] }
                                 description = { object["description"] }
