@@ -1,17 +1,28 @@
 import Button from "../../components/Topbar/Button/Button"
+import PanelContainer from "../../components/Home/PanelContainer/PanelContainer"
+
 import "./Home.css";
 
 const TopbarButtons = [
     "Home",
-    "Store",
     "Contact",
-    "FAQ"
+    "Jobs",
+    "FAQ",
 ]
-const TopbarRedirects = [
-    "/",
-    "/Store",
-    "/Contact",
-    "/FAQ"
+
+const HomePanels = [
+    {
+        "name": "Panel Name 1",
+
+        "description": "Panel Description 1",
+        "image": "",
+    },
+    {
+        "name": "testPanel",
+
+        "description": "Panel Description 2",
+        "image": "",
+    },
 ]
 
 function Home() {
@@ -23,7 +34,7 @@ function Home() {
                         ( object, index ) => {
                             return < Button textContent = { object } onClick = {
                                 () => {
-                                    location.assign( TopbarRedirects[index] )
+                                    location.assign(`/${object.toLowerCase()}`)
                                 }
                             } />
                         }
@@ -31,7 +42,17 @@ function Home() {
                 }
             </div>
             <div className="content">
-                <h>{location.pathname.substring(1)}</h>
+                {
+                    HomePanels.map(
+                        ( object, index ) => {
+                            return < PanelContainer
+                                name = { object["name"] }
+                                description = { object["description"] }
+                                image = { object["image"] }
+                            />
+                        }
+                    )
+                }
             </div>
             <div className="footer"></div>
         </>

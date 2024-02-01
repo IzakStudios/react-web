@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+.panel-container-holder {
+    position: relative;
+
+    width: 80%;
+
+    container-name: heading;
+
+    aspect-ratio: 7/3;
+    
+    top: 2vh;
+    left: 50%;
+
+    transform: translateX(-50%);
+    
+    border-radius: 2vw;
+    border-color: #fff;
+    border-width: 0.35vw;
+    border-style: solid;
+    transform: translateX(-50%);
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    
+    background: #7af;
+    background: linear-gradient(#aff 0%, #6bf 25%, #02b 100%);
+}
+
+.panel-container-holder img {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+}
+
+.panel-container-holder h1 {
+    position: relative;
+    left: 1rem;
+    font-size: 4.5cqw;
+    font-family: "Poppins";
+    line-height: 0.75em;
+    color: white;
+    text-shadow: 0 0 1em #fff;
+}
+
+.panel-container-holder p1 {
+    position: relative;
+    top: -5%;
+    left: 1rem;
+    font-size: 3cqw;
+    font-family: "Poppins";
+    font-weight: 400;
+    line-height: 0.75em;
+    color: white;
+    text-shadow: 0 0 1em #fff;
+}
+
+@media only screen and (min-width: 800px) {
+    .panel-container-holder {
+        border-radius: 18px;
+        border-width: 3px;
+        width: 640px;
+    }
+    .panel-container-holder h1 {
+        font-size: 36px;
+    }
+    .panel-container-holder p1 {
+        font-size: 24px;
+    }
+}
